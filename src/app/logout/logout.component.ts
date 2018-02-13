@@ -13,7 +13,7 @@ export class LogoutComponent implements OnInit {
 
   ngOnInit() {
     localStorage.removeItem('token');
-    this.mediaService.logout();
+    this.mediaService.logged = false;
     this.router.navigate(['login']);
   }
 

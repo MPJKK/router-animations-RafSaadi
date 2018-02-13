@@ -24,6 +24,6 @@ export class LoginComponent implements OnInit {
 
   login() {
     console.log(this.user);
-    this.mediaService.loginUser(this.user);
+    this.mediaService.newUser(this.user);
   }
 }

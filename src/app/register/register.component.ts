@@ -10,21 +10,22 @@ import {HttpErrorResponse} from '@angular/common/http';
 })
 export class RegisterComponent implements OnInit {
 
-  user = new User('', '', '', '');
+  user = new User('', '', '');
 
   constructor(private mediaService: MediaService) {
+  }
+
+  register() {
+    console.log(this.user);
+    this.mediaService.newUser(this.user).subscribe(response => {
+      console.log(response);
+      this.mediaService.login(this.user);
+    }, (error: HttpErrorResponse) => {
+      console.log(error);
+    });
   }
 
   ngOnInit() {
   }
 
-  register() {
-    console.log(this.user);
-    this.mediaService.newUser(this.user).subscribe((response) => {
-      console.log(response);
-      this.mediaService.loginUser(this.user);
-    }, (error: HttpErrorResponse) => {
-      console.log(error);
-    });
-  }
 }
