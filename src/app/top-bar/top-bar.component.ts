@@ -10,6 +10,10 @@ export class TopBarComponent implements OnInit {
 
   constructor(public mediaService: MediaService) { }
 
+  public getRouterOutletState(outlet) {
+    return outlet.isActivated ? outlet.activatedRoute : '';
+  }
+
   ngOnInit() {
   }
 

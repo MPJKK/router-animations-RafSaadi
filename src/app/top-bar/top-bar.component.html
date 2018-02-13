@@ -1,5 +1,5 @@
 <nav>
-  <ul>
+  <ul [@fadeAnimation]="getRouterOutletState(o)">
     <li *ngIf="!mediaService.logged">
       <a [routerLink] = "'/register'">Register</a>
     </li>

@@ -14,6 +14,7 @@ import {MediaService} from './services/media.service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {ThumbnailPipe} from './pipes/thumbnail.pipe';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 
@@ -33,6 +34,7 @@ import {ThumbnailPipe} from './pipes/thumbnail.pipe';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+      BrowserAnimationsModule
   ],
   providers: [MediaService],
   bootstrap: [AppComponent],
